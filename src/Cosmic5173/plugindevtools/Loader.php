@@ -2,6 +2,7 @@
 
 namespace Cosmic5173\plugindevtools;
 
+use Cosmic5173\plugindevtools\command\RestartCommand;
 use Cosmic5173\plugindevtools\utils\Configuration;
 use pocketmine\plugin\PluginBase;
 use pocketmine\scheduler\Task;
@@ -28,6 +29,8 @@ class Loader extends PluginBase {
 
 	protected function onEnable() : void {
 		$this->config = new Configuration($this->getConfig());
+
+		$this->getServer()->getCommandMap()->register("plugindevtools", new RestartCommand());
 
 		// Create task which will be checking for updates.
 		$this->task = $this->getScheduler()->scheduleRepeatingTask(new class() extends Task {
@@ -62,9 +65,7 @@ class Loader extends PluginBase {
 
 		// Restart the server.
 		$this->getLogger()->notice("Found $count update(s). Preparing to update server...");
-
-		// Add a shutdown hook to start the server.
-		register_shutdown_function(function () use ($files) {
+		$this->restart(function () use ($files) {
 			// Copy file to plugins directory.
 			$targetDir = Server::getInstance()->getPluginPath();
 
@@ -76,6 +77,18 @@ class Loader extends PluginBase {
 			// Start the server.
 			system($this->config->getStartFile());
 		});
+	}
+
+	public function restart(?\Closure $shutdownFunction = null) : void {
+		if ($shutdownFunction !== null) {
+			$shutdownFunction = function () {
+				// Start the server.
+				system($this->config->getStartFile());
+			};
+		}
+
+		// Add a shutdown hook to start the server.
+		register_shutdown_function($shutdownFunction);
 
 		// Check if we should transfer players.
 		// If so, transfer all the players.
