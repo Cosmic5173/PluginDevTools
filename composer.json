@@ -1,0 +1,25 @@
+{
+    "name": "cosmic5173/plugin-dev-tools",
+    "description": "Plugin that makes your PocketMine-MP dev experience better.",
+    "type": "project",
+    "license": "GNU Lesser General Public License v2.1",
+    "authors": [
+        {
+            "name": "Cosmic5173",
+            "email": "contact@cosmic5173.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0",
+        "pocketmine/pocketmine-mp": "4.19.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "1.10.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cosmic5173\\PluginDevTools\\": "src/Cosmic5173/plugindevtools"
+        }
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,10 @@
+# Common IDEs
+/.idea/
+/.vscode/
+
+# Composer
+/vendor/
+
+# Build
+/out/
+/build-plugin-phar.php
