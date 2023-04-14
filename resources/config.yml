@@ -1,0 +1,19 @@
+# Settings related to auto-updating
+
+# Directory to look for updates (must start with /)
+update-dir: "/updates"
+
+# PocketMine-MP start file to use
+# Windows: "start.cmd"
+# Linux: "start.sh"
+# Custom: "your_filename"
+start-file: "start.cmd"
+
+
+# Settings related to transferring players
+
+# Whether to transfer players to another server
+do-transfer: true
+
+# Server to transfer players to (must be in the format "ip:port")
+transfer-server: "127.0.0.1:19132"
