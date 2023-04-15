@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05e888e4602a2ad3fc03533241fde88a",
+    "content-hash": "3d91bae224ed8610f63990ae94eb3178",
     "packages": [
         {
             "name": "adhocore/json-comment",
@@ -779,16 +779,16 @@
         },
         {
             "name": "pocketmine/pocketmine-mp",
-            "version": "4.19.0",
+            "version": "4.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmmp/PocketMine-MP.git",
-                "reference": "89deb0fe18f86d83a1d190682b60ae72da9cfe0c"
+                "reference": "a534ac759ab1d13c50de8f5728ed28612a6dd019"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmmp/PocketMine-MP/zipball/89deb0fe18f86d83a1d190682b60ae72da9cfe0c",
-                "reference": "89deb0fe18f86d83a1d190682b60ae72da9cfe0c",
+                "url": "https://api.github.com/repos/pmmp/PocketMine-MP/zipball/a534ac759ab1d13c50de8f5728ed28612a6dd019",
+                "reference": "a534ac759ab1d13c50de8f5728ed28612a6dd019",
                 "shasum": ""
             },
             "require": {
@@ -843,7 +843,7 @@
                 "webmozart/path-util": "^2.3"
             },
             "require-dev": {
-                "phpstan/phpstan": "1.10.11",
+                "phpstan/phpstan": "1.10.13",
                 "phpstan/phpstan-phpunit": "^1.1.0",
                 "phpstan/phpstan-strict-rules": "^1.2.0",
                 "phpunit/phpunit": "^9.2"
@@ -865,7 +865,7 @@
             "homepage": "https://pmmp.io",
             "support": {
                 "issues": "https://github.com/pmmp/PocketMine-MP/issues",
-                "source": "https://github.com/pmmp/PocketMine-MP/tree/4.19.0"
+                "source": "https://github.com/pmmp/PocketMine-MP/tree/4.19.2"
             },
             "funding": [
                 {
@@ -877,7 +877,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-04-11T21:48:02+00:00"
+            "time": "2023-04-14T17:43:41+00:00"
         },
         {
             "name": "pocketmine/raklib",
@@ -1694,16 +1694,16 @@
     "packages-dev": [
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.12",
+            "version": "1.10.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "7b2aaf999e522e2b10011a594cf06dc37de7fbd8"
+                "reference": "f07bf8c6980b81bf9e49d44bd0caf2e737614a70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/7b2aaf999e522e2b10011a594cf06dc37de7fbd8",
-                "reference": "7b2aaf999e522e2b10011a594cf06dc37de7fbd8",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f07bf8c6980b81bf9e49d44bd0caf2e737614a70",
+                "reference": "f07bf8c6980b81bf9e49d44bd0caf2e737614a70",
                 "shasum": ""
             },
             "require": {
@@ -1752,7 +1752,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-12T10:33:29+00:00"
+            "time": "2023-04-12T19:29:52+00:00"
         }
     ],
     "aliases": [],
