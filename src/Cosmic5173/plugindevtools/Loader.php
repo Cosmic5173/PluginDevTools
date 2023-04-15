@@ -80,7 +80,7 @@ class Loader extends PluginBase {
 	}
 
 	public function restart(?\Closure $shutdownFunction = null) : void {
-		if ($shutdownFunction !== null) {
+		if ($shutdownFunction === null) {
 			$shutdownFunction = function () {
 				// Start the server.
 				system($this->config->getStartFile());
