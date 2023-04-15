@@ -7,4 +7,5 @@
 
 # Build
 /out/
+/builds/
 /build-plugin-phar.php
