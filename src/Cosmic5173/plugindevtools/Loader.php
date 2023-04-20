@@ -43,13 +43,16 @@ class Loader extends PluginBase {
 	}
 
 	protected function onDisable() : void {
-		$this->task->cancel();
+		$this->task?->cancel();
 	}
 
 	public function checkForUpdate(bool $update = true) : void {
 		// Get all files in the update directory.
 		$files = [];
-		foreach (scandir($this->config->getUpdateDir()) as $file) {
+		$scannedFiles = scandir($this->config->getUpdateDir());
+		if ($scannedFiles === false) throw new \RuntimeException("Unable to scan update directory.");
+
+		foreach ($scannedFiles as $file) {
 			if ($file !== "." && $file !== ".." && str_ends_with($file, ".phar")) {
 				$files[] = $file;
 			}
