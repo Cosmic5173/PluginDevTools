@@ -1,6 +1,6 @@
 name: PluginDevTools
 description: Plugin that makes your PocketMine-MP dev experience better.
-version: 1.0.0-dev
+version: 1.0.1
 author: Cosmic5173
 permissions:
   plugindevtools.command.restart:
